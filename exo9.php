@@ -1,7 +1,17 @@
 <?php
-$age=32;
-$sexe="F";
-
+$age=36;
+$sexe="H";
+if ($age >= 20 && $sexe == "H"||$age >= 18 && $age <= 35 && $sexe == "F")
+{
+    echo "Age : ".$age."<br>";
+    echo "Sexe : ".$sexe."<br>";
+    echo "La personne est imposable";
+}
+else{
+    echo "Age : ".$age."<br>";
+    echo "Sexe : ".$sexe."<br>";
+    echo "La personne est non imposable";
+}
 
 // Nous souhaitons savoir si une personne est
 //  imposable en fonction de son âge et de son sexe.
