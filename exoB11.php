@@ -1,16 +1,18 @@
 <?php
-// Créer une fonction personnalisée convertirMajRouge()
-//  permettant de transformer une chaîne de caractère
-//   passée en argument en majuscules et en rouge.
-// Vous devrez appeler la fonction comme suit :
-//  convertirMajRouge($texte) ; Affichage
-//   (si $texte = « Mon texte en paramètre »)
-// MON TEXTE EN PARAMETRE
-$ph="Mon texte en paramètre";
-convertirMajRouge($ph);
+// Exercice 11
+// Ecrire une fonction personnalisée qui affiche
+//  une date en français (en toutes lettres) à partir d’une
+// chaîne de caractère représentant une date.
+// Exemple :
+// formaterDateFr("2018-02-23");
+// Affichage
+// vendredi 23 février 2018
 
-function convertirMajRouge($toto){
-    $newphrase = mb_strtoupper($toto); //tout en majuscule
-    echo "<p style='color:#FF0016;'>$newphrase</p>";
-}
+$dateChiffre = "2018-02-23";
+setlocale(LC_TIME, 'fr_FR.utf8');
+echo 'Nous sommes le '.strftime('%A %d %B %Y', strtotime($dateChiffre));
+
+
+// function formaterDateFr($dateChiffre){
+// }
 

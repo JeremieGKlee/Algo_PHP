@@ -1,16 +1,20 @@
 <?php
-// Créer une fonction personnalisée convertirMajRouge()
-//  permettant de transformer une chaîne de caractère
-//   passée en argument en majuscules et en rouge.
-// Vous devrez appeler la fonction comme suit :
-//  convertirMajRouge($texte) ; Affichage
-//   (si $texte = « Mon texte en paramètre »)
-// MON TEXTE EN PARAMETRE
-$ph="Mon texte en paramètre";
-convertirMajRouge($ph);
+// /Exercice 12
+// La fonction var_dump($variable) permet
+//  d’afficher les informations d’une variable.
+// Soit le tableau suivant :
+// $tableauValeurs=array
+// (true,"texte",10,25.369,array("valeur1","valeur2"));
+// A l’aide d’une boucle, afficher les informations
+//  des variables contenues dans le tableau.
+// Affichage
+// bool(true)
+// string(5) "texte"
+// int(10)
+// float(25.369)
+// array(2) { [0]=> string(7) "valeur1" [1]=> string(7) "valeur2" }
 
-function convertirMajRouge($toto){
-    $newphrase = mb_strtoupper($toto); //tout en majuscule
-    echo "<p style='color:#FF0016;'>$newphrase</p>";
+$tableauValeurs=[true,"texte",10,25.369,["valeur1","valeur2"]];
+foreach ($tableauValeurs as $value){
+    var_dump($value)."<br>";
 }
-

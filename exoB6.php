@@ -6,3 +6,25 @@ Exemple : $elements = array("Monsieur","Madame","Mademoiselle");
 Affichage  -->
  
 <?php
+// $elements =["Monsieur","Madame","Mademoiselle"];
+// function alimenterListeDeroulante($elements){
+//     $i=0;
+//     echo "<select>";
+//     while ($i <= 2){ 
+//         echo "<option>".$elements[$i]."</option>";
+//         $i++;      
+//     }
+//     echo "</select>";
+// }
+// echo alimenterListeDeroulante($elements);
+
+// 
+$elements =["Monsieur","Madame","Mademoiselle"];
+function alimenterListeDeroulante($elements){
+    echo "<select>";
+    foreach ($elements as $value){ 
+        echo "<option>".$value."</option>";     
+    }
+    echo "</select>";
+}
+echo alimenterListeDeroulante($elements);

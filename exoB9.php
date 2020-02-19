@@ -1,16 +1,16 @@
+<!-- Exercice 9
+Créer une fonction personnalisée permettant d’afficher
+des boutons radio avec un tableau de valeurs
+en paramètre ("Monsieur","Madame","Mademoiselle").
+Exemple :
+afficherRadio($nomsRadio); -->
 <?php
-// Créer une fonction personnalisée convertirMajRouge()
-//  permettant de transformer une chaîne de caractère
-//   passée en argument en majuscules et en rouge.
-// Vous devrez appeler la fonction comme suit :
-//  convertirMajRouge($texte) ; Affichage
-//   (si $texte = « Mon texte en paramètre »)
-// MON TEXTE EN PARAMETRE
-$ph="Mon texte en paramètre";
-convertirMajRouge($ph);
-
-function convertirMajRouge($toto){
-    $newphrase = mb_strtoupper($toto); //tout en majuscule
-    echo "<p style='color:#FF0016;'>$newphrase</p>";
-}
-
+$nomsRadio =["Monsieur","Madame","Mademoiselle"];
+function afficherRadio($nomsRadio){
+    echo "<form>";
+    foreach($nomsRadio as $value){ 
+        echo "<input type='radio' name='genre'><label>".$value."</label></br>";
+    }
+    echo "</form>";
+}    
+afficherRadio($nomsRadio);

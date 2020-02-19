@@ -7,7 +7,7 @@ class Personne{
 public function __construct($nom,$prenom,$dateNaissance){
     $this->_nom = $nom;
     $this->_prenom = $prenom;
-    $this->_dateNaissance = $dateNaissance = new DateTime($dateNaissance); //permet de connaitre le format de la date new DateTime($dateNaissance)
+    $this->_dateNaissance = new DateTime($dateNaissance); //permet de connaitre le format de la date new DateTime($dateNaissance)
 }
 public function getNom(){
     return $this->_nom;

@@ -1,7 +1,30 @@
-<!-- Exercice 2 
-Soit le tableau suivant : $capitales = array ("France"=>"Paris","Allemagne"=>"Berlin","USA"=>"Washington","Italie"=>"Rome"); 
-Réaliser un algorithme permettant d’afficher le tableau HTML suivant (notez que le nom du pays s’affichera en majuscule et que le tableau est trié par ordre alphabétique du nom de pays) grâce à une fonction personnalisée. 
-Vous devrez appeler la fonction comme suit : afficherTableHTML($capitales);  
-Affichage 
-Pays Capitale ALLEMAGNE Berlin FRANCE Paris ITALIE Rome USA Washington  -->
+<!-- Exercice 7
+Créer une fonction personnalisée permettant de générer
+ des cases à cocher. On pourra préciser dans
+le tableau associatif si la case est cochée ou non.
+Exemple :
+genererCheckbox($elements);
+//où $elements est un tableau associatif
+ clé => valeur avec 3 entrées.
+  Berlin FRANCE Paris ITALIE Rome USA Washington  -->
 <?php
+// $elements =["Choix 1","Choix 2","Choix 3"];
+// function genererCheckbox($elements){
+//     echo "<form>";
+//     foreach ($elements as $value){ 
+//     echo "<input type='checkbox' id='scales' name='scales'
+//     <label for='scales'>".$value."</label> </br>";
+//     }
+//     echo "</form>";
+// }
+// echo genererCheckbox($elements);
+
+$elements =["Choix 1"=>"","Choix 2"=>"checked","Choix 3"=>""];
+function genererCheckbox($elements){
+    echo "<form>";
+    foreach($elements as $choix => $checked){ 
+        echo "<input type='checkbox' $checked><label>".$choix."</label> </br>";
+    }
+    echo "</form>";
+}    
+genererCheckbox($elements);
