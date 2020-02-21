@@ -43,7 +43,24 @@ public function getContact(){
 public function demarrer(){
     $this->_contact = true;
 }
-
+public function accelerer(){
+    if($this->_contact == true){
+        $this->_vitesseActuelle = $this->_vitesseActuelle + 30;
+    }
+    else{
+        echo "Mettre le contact";
+    }
+        
+}
+public function stopper(){
+    if($this->_contact == true){
+        $this->_contact = false;
+    }
+    else{    
+        echo "Ne peux pas arreter un vehicule deja arreté";
+    }
+}
+}
 
 
 
