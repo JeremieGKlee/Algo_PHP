@@ -23,7 +23,7 @@ $elements =["Choix 1"=>"","Choix 2"=>"checked","Choix 3"=>""];
 function genererCheckbox($elements){
     echo "<form>";
     foreach($elements as $choix => $checked){ 
-        echo "<input type='checkbox' $checked><label>".$choix."</label> </br>";
+        echo "<input type='checkbox' $checked><label>$choix</label> </br>";
     }
     echo "</form>";
 }    

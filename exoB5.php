@@ -9,9 +9,8 @@ $nomsInput=["Nom","Prénom","Ville"];
 function afficherInput($nomsInput){
     echo "<fieldset style='background-color:#F5F5F5;width:200px;border:none;'><form> "
     .$nomsInput[0]."<br/> <input type ='text' name='Nom'><br>"
-        .$nomsInput[1]. "<br/> <input type='text' name='Prénom'><br/>"
-        .$nomsInput[2]."<br/><input type='text' name='Ville'><br/></form></fieldset>";
-
+    .$nomsInput[1]. "<br/> <input type='text' name='Prénom'><br/>"
+    .$nomsInput[2]."<br/><input type='text' name='Ville'><br/></form></fieldset>";
 }
 afficherInput($nomsInput);
 ?>

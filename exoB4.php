@@ -3,7 +3,7 @@ $capitales=['France'=>'Paris','Allemagne'=>'Berlin','Usa'=>'Washington','Italie'
 function afficherTableHTML($capitales){
     $capitales=array_change_key_case($capitales, CASE_UPPER);
     ksort($capitales);
-     echo"<table><thead><tr><th style='border:2px solid black;width:400px;'>Pays</th>
+     echo"<table ; style= 'border-collapse:collapse;'><thead><tr><th style='border:2px solid black;width:400px;'>Pays</th>
      <th style='border:2px solid black;width:400px;'>Ville</th>
      <th style='border:2px solid black;width:400px;'>Lienwiki</th></tr></thead><tbody>";
     foreach ($capitales as $pays => $ville) {

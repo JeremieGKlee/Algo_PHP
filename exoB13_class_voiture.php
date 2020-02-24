@@ -19,12 +19,12 @@ class Voiture{
     private $_vitesseActuelle;
     private $_contact;
 
-public function __construct($marque = "",$modele = "",$nbPortes = 0,$vitesseActuelle =0,$contact=false){
+public function __construct($marque = "",$modele = "",$nbPortes = 0){
     $this->_marque =$marque;
     $this->_modele =$modele;
     $this->_nbPortes =$nbPortes;
-    $this->_vitesseActuelle =$vitesseActuelle;
-    $this->_contact = $contact;
+    $this->_vitesseActuelle =0;
+    $this->_contact = false;
 }
 public function getMarque(){
     return $this ->_marque;
@@ -42,20 +42,21 @@ public function getContact(){
     return $this ->_contact;
 }
 public function setVitesseActuelle($vitesseActuelle){
-    $this->_vitesseActuelle = $vitesseActuelle;
+    $this->_vitesseActuelle = 0;
 }
 public function demarrer(){
-    if($this->_contact == false){
-        $this->_contact = true;
-        echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." démarre.<br>";
+    if($this->_contact == false) // ou if(!$this->_contact)
+    {
+        $this->_contact = true;// ou if($this->_contact)
+        echo "Le véhicule $this  démarre <br>";
     }
     else{
-        echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." est déjà démarre.<br>";
+        echo "Le véhicule $this est déjà démarré.<br>";
     }
 }
-public function accelerer(){
+public function accelerer($vitesse){
     if($this->_contact == true){
-        $this->_vitesseActuelle = $this->_vitesseActuelle + 50;
+        $this->_vitesseActuelle += $vitesse;
         echo "Le véhicule ".$this->getMarque()." ".$this->getModele()." accélère de ".$this->getVitesseActuelle()." km/h.<br>";
     }
     else{
@@ -65,10 +66,10 @@ public function accelerer(){
 public function stopper(){
     if($this->_contact == true){
         $this->_contact = false;
-        echo $this->getMarque()." ".$this->getModele()." est stoppé.<br>";
+        echo "$this-> est stoppé.<br>";
     }
-    else{    
-        echo $this->getMarque()." ".$this->getModele()." est à l'arrêt.<br>";
+    else{  
+        echo "$this est déjà à l'arrêt.<br>";
     }
 }
 public function vitesseEnCours(){

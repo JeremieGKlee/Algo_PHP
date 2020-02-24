@@ -9,7 +9,7 @@ $nomsRadio =["Monsieur","Madame","Mademoiselle"];
 function afficherRadio($nomsRadio){
     echo "<form>";
     foreach($nomsRadio as $value){ 
-        echo "<input type='radio' name='genre'><label>".$value."</label></br>";
+        echo "<input type='radio' name='genre'><label>$value</label></br>";
     }
     echo "</form>";
 }    
