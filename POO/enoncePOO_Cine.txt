@@ -13,3 +13,12 @@ On doit pouvoir afficher :
 - la liste des rôles d'un acteur (nom du rôle et titre du film)
 - la liste des acteurs ayant incarné un rôle précis (nom + prénom de l'acteur et film dans lequel le rôle a été incarné)
 - tous les films d'un genre précis
+
+
+ tous les films d'un réalisateur
+ tous les films d'un genre précis
+
+personnes
+et ensuite heritage pour
+realisateur 
+acteur

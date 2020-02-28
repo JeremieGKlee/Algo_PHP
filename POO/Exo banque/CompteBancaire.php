@@ -10,6 +10,7 @@ class CompteBancaire{
         $this->_soldeInitial=$soldeInitial;
         $this->_deviseMonetaire=$deviseMonetaire;
         $this->_titulaire=$titulaire;
+        $titulaire->ajouterCompte($this);
     }
     public function getLibelle(){
         return $this->_libelle;
@@ -44,5 +45,19 @@ class CompteBancaire{
                 Nom du titulaire : ".$this->getTitulaire()->getPrenom()."<br>
                 Prenom du titulaire :".$this->getTitulaire()->getNom()."<br>
                 <br>";
+    }
+    public function crediter($montant){
+        $this->_soldeInitial+=$montant;
+        
+    }
+    public function debiter($montant){
+        $this->_soldeInitial-=$montant;
+    }
+    public function virement($montant,$compte_cible){
+        $this-> debiter($montant);
+        $compte_cible-> crediter($montant);
+    }
+    public function sommeDesComptes(){
+        
     }
 }

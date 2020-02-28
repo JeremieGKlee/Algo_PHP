@@ -39,8 +39,22 @@ class Titulaire{
         $this->_ville=$ville;
     }
     public function getInfosTitulaire(){
-        return "Nom du titulaire : $this->_prenom <br>
+        echo "Nom du titulaire : $this->_prenom <br>
                 Prenom du titulaire :$this->_nom <br>
                 Age du titulaire :" .$this->getAge()."<br>";
+        echo "Nombre de compte liés ".count($this->_compte)."</br>";
+        $total = 0;
+        foreach($this->_compte as $compte){
+            echo $compte->getlibelle()." " .$compte->getSoldeInitial()."</br>";
+            $total += $compte->getSoldeInitial();
+        }
+        echo "<br>Total des ". count($this->_compte). " comptes : $total";
+
     }
+
+    public function ajouterCompte($compte){
+        $this->_compte[] = $compte;  // array_push($this->_compte, $compte)
+    }
+    
+
 }
