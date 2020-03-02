@@ -5,8 +5,9 @@ include 'Film.php';
 include 'Personne.php';
 include 'Realisateur.php';
 include 'Acteur.php';
-include 'Genre';
+include 'Genre.php';
 include 'Role.php';
+include 'Relation.php';
 
 // class film ($titreDuFilm,$anneeDeSortie,$duree,$synopsis,$realisateur,$genre)
 // class Personne ($nom,$prenom,$dateDeNaissance)
@@ -16,14 +17,14 @@ include 'Role.php';
 // class Role ($nomDuRole)
 
 
-$r1 = new Realisateur("KOPTER","Elie","1958-10-11");
-$r2 = new Realisateur("PALETAN","Enora","1947-08-25");
-$r3 = new Realisateur("NOUI","Eva","1977-05-13");
-$r4 = new Realisateur("COVER","Harry","1956-02-12");
-$r5 = new Realisateur("AYMAR","Jean","1947-08-24");
-$r6 = new Realisateur("DENT","Jessie","1997-09-19");
-$r7 = new Realisateur("TERIEUR","Alain","1975-01-28");
-$r8 = new Realisateur("BO","Harry","1967-02-24");
+$rea1 = new Realisateur("KOPTER","Elie","1958-10-11");
+$rea2 = new Realisateur("PALETAN","Enora","1947-08-25");
+$rea3 = new Realisateur("NOUI","Eva","1977-05-13");
+$rea4 = new Realisateur("COVER","Harry","1956-02-12");
+$rea5 = new Realisateur("AYMAR","Jean","1947-08-24");
+$rea6 = new Realisateur("DENT","Jessie","1997-09-19");
+$rea7 = new Realisateur("TERIEUR","Alain","1975-01-28");
+$rea8 = new Realisateur("BO","Harry","1967-02-24");
 
 $a1 = new Acteur("EVENU","Hilaire","1981-10-21");
 $a2 = new Acteur("SLAVE","Hugo","1982-08-05");
@@ -43,30 +44,51 @@ $g6 = new Genre("Famille");
 $g7 = new Genre("Policier");
 $g8 = new Genre("Adulte");
 
-$r1 = new Role("Inspecteur de police");
-$r2 = new Role("Serveur 1");
-$r3 = new Role("Serveur 2");
-$r4 = new Role("Mechant 1");
-$r5 = new Role("Mechant 2");
-$r6 = new Role("Coronavirus");
-$r7 = new Role("Deadpool");
-$r8 = new Role("L'inconnu");
+$ro1 = new Role("Le lançeur d'alerte");
+$ro2 = new Role("Patient zero");
+$ro3 = new Role("Le tousseur");
+$ro4 = new Role("Le cracheur ");
+$ro5 = new Role("L'enrhumé");
+$ro6 = new Role("Le porteur du Coronavirus");
+$ro7 = new Role("Le pas de bol");
+$ro8 = new Role("Le postillonneur");
 
 // class film ($titreDuFilm,$anneeDeSortie,$duree,$synopsis,$realisateur,$genre)
 
-$f1 = new Film("","1980",90,"Lara Clette","$r8","$g1");
-$f2 = new Film("","2020",87,"Larry Zona et Missis Hippy","$r7","$g2");
-$f3 = new Film("","1973",125,"Line Ot'tension","$r6","$g3");
-$f4 = new Film("","1977",132,"Luc Ratif","$r5","$g4");
-$f5 = new Film("","1981",65,"Lucas-René Fenêtre","$r4","$g5");
-$f6 = new Film("","1993",111,"Luce Hyfer O'Zenfer","$r3","$g6");
-$f7 = new Film("","2011",77,"","$r2","$g7");
-$f8 = new Film("","2014",89,"","$r1","$g8");
-$f9 = new Film("","2015",131,"","$r8","$g1");
-$f10 = new Film("","2017",94,"","$r7","$g2");
-$f11 = new Film("","1983",113,"","$r6","$g3");
-$f12 = new Film("","1988",104,"","$r5","$g4");
-$f13 = new Film("","2001",91,"","$r4","$g5");
-$f14 = new Film("","2019",82,"","$r3","$g6");
-$f15 = new Film("","2005",73,"","$r2","$g7");
-$f16 = new Film("","2009",79,"","$r1","$g8");
+$f1 = new Film("Runaway Train","1980",90,"Lara Clette",$rea8,$g1);
+$f2 = new Film("Unstoppable","2020",87,"Larry Zona et Missis Hippy",$rea7,$g2);
+$f3 = new Film("Le train","1973",125,"Line Ot'tension",$rea6,$g3);
+$f4 = new Film("La bataille du rail","1977",132,"Luc Ratif",$rea5,$g4);
+$f5 = new Film("Source Code","1981",65,"Lucas-René Fenêtre",$rea4,$g5);
+$f6 = new Film("Le crime de l'Orient Express","1993",111,"Luce Hyfer O'Zenfer",$rea3,$g6);
+$f7 = new Film("Le Pôle Express","2011",77,"Cécile En Cieux",$rea2,$g7);
+$f8 = new Film("Le train sifflera trois fois","2014",89,"Héléna Du Mondaubalcon",$rea1,$g8);
+$f9 = new Film("Train de nuit","2015",131,"Charles Ottofraize",$rea8,$g1);
+$f10 = new Film("Lone Ranger","2017",94,"Colette Et Berthe Mavallée",$rea7,$g2);
+$f11 = new Film("Transsiberian","1983",113,"Georgette Tousskjebouf",$rea6,$g3);
+$f12 = new Film("Dernier train pour Busan ","1988",104,"Gilles S. Desplumes",$rea5,$g4);
+$f13 = new Film("Snowpiercer, le Transperceneige","2001",91,"Jérémy Unmantopourlivère",$rea4,$g5);
+$f14 = new Film("The Passenger","2019",82,"Juda Nanasse Éjudas Bricot",$rea3,$g6);
+$f15 = new Film("Piège à grande vitesse","2005",73,"Justine Ptitghoute Et Sa Sœur Anne-Corinne Ptitghoute",$rea2,$g7);
+$f16 = new Film("Le rail","2009",79,"Marie-Ange Pluvieux, Marie-Ange Heureuxs",$rea1,$g8);
+
+$relation1 = new Relation($a1,$f1,$ro1);
+$relation2 = new Relation($a2,$f2,$ro2);
+$relation3 = new Relation($a3,$f3,$ro3);
+$relation4 = new Relation($a4,$f4,$ro4);
+$relation5 = new Relation($a5,$f5,$ro5);
+$relation6 = new Relation($a6,$f6,$ro6);
+$relation7 = new Relation($a7,$f7,$ro7);
+$relation8 = new Relation($a8,$f8,$ro8);
+$relation9 = new Relation($a1,$f2,$ro3);
+$relation10 = new Relation($a2,$f3,$ro4);
+$relation11 = new Relation($a3,$f4,$ro5);
+$relation12 = new Relation($a4,$f5,$ro6);
+$relation13 = new Relation($a5,$f6,$ro7);
+$relation14 = new Relation($a6,$f7,$ro8);
+$relation15 = new Relation($a7,$f8,$ro1);
+$relation16 = new Relation($a8,$f1,$ro2);
+
+// $rea1->getInfoRealisateur();
+// $g1->getInfoTousLesFilmsDunGenre();
+$a1->getInfoActeur();

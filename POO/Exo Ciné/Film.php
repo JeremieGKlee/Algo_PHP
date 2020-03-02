@@ -14,7 +14,9 @@ class Film{
         $this->_duree=$duree;
         $this->_synopsis=$synopsis;
         $this->_realisateur=$realisateur;
+        $realisateur->ajouterFilm($this);
         $this->_genre=$genre;
+        $genre->ajouterFilmAuGenre($this);
     }
     public function getTitreDuFilm(){
         return $this->_titreDuFilm;
