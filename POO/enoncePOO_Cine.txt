@@ -15,8 +15,8 @@ On doit pouvoir afficher :
 - tous les films d'un genre précis
 
 
- tous les films d'un réalisateur
- tous les films d'un genre précis
+ tous les films d'un réalisateur ok
+ tous les films d'un genre précis ok
 
 personnes
 et ensuite heritage pour

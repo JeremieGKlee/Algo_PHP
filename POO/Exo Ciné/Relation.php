@@ -5,7 +5,7 @@ class Relation {
     private $_film;
     private $_role;
 
-public function __construct($acteur,$film,$role){
+public function __construct(Acteur $acteur,Film $film,Role $role){
     $this->_acteur=$acteur;
     $this->_film=$film;
     $acteur->ajouterJoueDansFilm($this);
@@ -16,10 +16,10 @@ public function getActeur(){
     return $this->_acteur;
 }
 public function getFilm(){
-    return $this->_film;
+    return $this->_film->getTitreDuFilm();
 }
 public function getRole(){
-    return $this->_role;
+    return $this->_role->getNomDuRole();
 }
 public function setActeur($acteur){
     $this->_acteur=$acteur;

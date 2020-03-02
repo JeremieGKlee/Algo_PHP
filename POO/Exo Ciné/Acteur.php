@@ -14,14 +14,14 @@ class Acteur extends Personne{
             Nom de l'acteur : " .$this->getNom() ."</br>
             Age de l'acteur : ".$this->getAge()." ans.</br>";
         echo "Nombre de film à son actif : ".count($this->_nbreDeFilmJoue).".</br>";
-        //     echo "Il a joué dans : </br>";
-        // foreach($this->_nbreDeFilmJoue as $nbreDeFilmJoue){
-        //     echo $nbreDeFilmJoue->getFilm()."</br>";
-        // }
+            echo "Il a joué dans : </br>";
+        foreach($this->_nbreDeFilmJoue as $nbreDeFilmJoue){
+            echo $nbreDeFilmJoue->getTitreDuFilm()."</br>";
+        }
         echo "Nombre de rôle à son actif : ".count($this->_nbreDeRoleJoue).".</br>";
             echo "Il a joué comme rôle de : </br>" ;
         foreach($this->_nbreDeRoleJoue as $nbreDeRoleJoue){
-            echo $nbreDeRoleJoue->getFilm()."</br>";
+            echo $nbreDeRoleJoue->getNomDuRole()."</br>";
 
         }
     }
