@@ -92,3 +92,4 @@ $relation16 = new Relation($a8,$f1,$ro2);
 // $rea1->getInfoRealisateur();
 // $g1->getInfoTousLesFilmsDunGenre();
 $a1->getInfoActeur();
+$f1->getInfoFilm();
