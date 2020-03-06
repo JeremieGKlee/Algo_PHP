@@ -7,6 +7,7 @@ class Film{
     private $_synopsis;
     private $_realisateur;
     private $_genre;
+    private $_nbreActeur;
 
     public function __construct($titreDuFilm,$anneeDeSortie,$duree,$synopsis,Realisateur $realisateur,Genre $genre){
         $this->_titreDuFilm=$titreDuFilm;
@@ -17,6 +18,7 @@ class Film{
         $realisateur->ajouterFilm($this);
         $this->_genre=$genre;
         $genre->ajouterFilmAuGenre($this);
+        $this->_nbreActeur=[];
     }
     public function getTitreDuFilm(){
         return $this->_titreDuFilm;
@@ -39,12 +41,9 @@ class Film{
     public function getRealisateurNom(){
         return $this->_realisateur->getNom();
     }
-
-
     public function getGenre(){
         return $this->_genre-> getGenreDeFilm();
     }
-
     public function setTitreDuFilm($titreDuFilm){
         $this->_titreDuFilm= $titreDuFilm;
     }
@@ -63,13 +62,20 @@ class Film{
     public function setGenre($genre){
         $this->_genre= $genre;
     }
+    public function ajouterActeur($nbreActeur){
+        $this->_nbreActeur[] =$nbreActeur;
+    }
     public function getInfoFilm(){
         echo "Titre du film : " .$this->getTitreDuFilm() ."</br>
         Année de sortie : " .$this->getAnneeDeSortie() ."</br>
         Durée du film : "   .date('H:i', mktime(0,$this->_duree))."</br>
-        Genre du film : " .$this->getGenre() ."</br>";
-        "Prénom et Nom du réalisateur : " ..$this->getRealisateurPrenom() ." ".
-        
+        Genre du film : " .$this->getGenre() ."</br>
+        Prénom et Nom du réalisateur : " .$this->getRealisateurPrenom() ." ".$this->getRealisateurNom()."</br>
+        Ce film compte : ".count($this->_nbreActeur). " acteurs </br>";
+        foreach ($this->_nbreActeur as $nbreActeur ) {
+            echo "Prénom et Nom de l'acteur : ".$nbreActeur->getPrenomActeur()." ".$nbreActeur->getNomActeur()."</br>";
+           
+        }
  
 
 

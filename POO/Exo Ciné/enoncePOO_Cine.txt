@@ -7,16 +7,17 @@ Role : nom du rôle
 Genre : nom du genre
 
 On doit pouvoir afficher :
-- tous les films d'un réalisateur
-- tous les films d'un acteur (film + nom du rôle)
+- tous les films d'un réalisateur ok
+- tous les films d'un acteur (film + nom du rôle) ok
+- tous les films d'un genre précis ok
+- la liste des rôles d'un acteur (nom du rôle et titre du film)ok
+
 - toutes les informations d'un film (titre, année, durée en HH:MM, genre, liste des acteurs (nom + prénom), réalisateur (nom + prénom))
-- la liste des rôles d'un acteur (nom du rôle et titre du film)
 - la liste des acteurs ayant incarné un rôle précis (nom + prénom de l'acteur et film dans lequel le rôle a été incarné)
-- tous les films d'un genre précis
 
 
- tous les films d'un réalisateur ok
- tous les films d'un genre précis ok
+
+
 
 personnes
 et ensuite heritage pour

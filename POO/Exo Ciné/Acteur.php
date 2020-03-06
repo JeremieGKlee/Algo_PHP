@@ -5,6 +5,8 @@ class Acteur extends Personne{
     public function __construct($nom,$prenom,$dateDeNaissance){
         parent::__construct($nom,$prenom,$dateDeNaissance);
         $this->_nbreDeFilmJoue=[];
+        $this->_nom=$nom;
+        $nom->nbreDeCasting($this);
     }
 
     public function getInfoActeur(){

@@ -7,7 +7,7 @@ include 'Realisateur.php';
 include 'Acteur.php';
 include 'Genre.php';
 include 'Role.php';
-include 'Relation.php';
+include 'Casting.php';
 
 // class film ($titreDuFilm,$anneeDeSortie,$duree,$synopsis,$realisateur,$genre)
 // class Personne ($nom,$prenom,$dateDeNaissance)
@@ -72,24 +72,25 @@ $f14 = new Film("The Passenger","2019",82,"Juda Nanasse Éjudas Bricot",$rea3,$g
 $f15 = new Film("Piège à grande vitesse","2005",73,"Justine Ptitghoute Et Sa Sœur Anne-Corinne Ptitghoute",$rea2,$g7);
 $f16 = new Film("Le rail","2009",79,"Marie-Ange Pluvieux, Marie-Ange Heureuxs",$rea1,$g8);
 
-$relation1 = new Relation($a1,$f1,$ro1);
-$relation2 = new Relation($a2,$f2,$ro2);
-$relation3 = new Relation($a3,$f3,$ro3);
-$relation4 = new Relation($a4,$f4,$ro4);
-$relation5 = new Relation($a5,$f5,$ro5);
-$relation6 = new Relation($a6,$f6,$ro6);
-$relation7 = new Relation($a7,$f7,$ro7);
-$relation8 = new Relation($a8,$f8,$ro8);
-$relation9 = new Relation($a1,$f2,$ro3);
-$relation10 = new Relation($a2,$f3,$ro4);
-$relation11 = new Relation($a3,$f4,$ro5);
-$relation12 = new Relation($a4,$f5,$ro6);
-$relation13 = new Relation($a5,$f6,$ro7);
-$relation14 = new Relation($a6,$f7,$ro8);
-$relation15 = new Relation($a7,$f8,$ro1);
-$relation16 = new Relation($a8,$f1,$ro2);
+$Casting1 = new Casting($a1,$f1,$ro1);
+$Casting2 = new Casting($a2,$f2,$ro2);
+$Casting3 = new Casting($a3,$f3,$ro3);
+$Casting4 = new Casting($a4,$f4,$ro4);
+$Casting5 = new Casting($a5,$f5,$ro5);
+$Casting6 = new Casting($a6,$f6,$ro6);
+$Casting7 = new Casting($a7,$f7,$ro7);
+$Casting8 = new Casting($a8,$f8,$ro8);
+$Casting9 = new Casting($a1,$f2,$ro3);
+$Casting10 = new Casting($a2,$f3,$ro4);
+$Casting11 = new Casting($a3,$f4,$ro5);
+$Casting12 = new Casting($a4,$f5,$ro6);
+$Casting13 = new Casting($a5,$f6,$ro7);
+$Casting14 = new Casting($a6,$f7,$ro8);
+$Casting15 = new Casting($a7,$f8,$ro1);
+$Casting16 = new Casting($a8,$f1,$ro2);
 
 // $rea1->getInfoRealisateur();
 // $g1->getInfoTousLesFilmsDunGenre();
-$a1->getInfoActeur();
-$f1->getInfoFilm();
+// $a1->getInfoActeur();
+// $f1->getInfoFilm();
+getListeInfoActeur();
