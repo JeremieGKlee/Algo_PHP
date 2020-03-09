@@ -4,7 +4,6 @@ class Casting {
     private $_acteur;
     private $_film;
     private $_role;
-    private $_totalActeur;
 
 public function __construct(Acteur $acteur,Film $film,Role $role){
     $this->_acteur=$acteur;
@@ -12,7 +11,7 @@ public function __construct(Acteur $acteur,Film $film,Role $role){
     $film->ajouterActeur($this);
     $acteur->ajouterJoueDansFilm($this);
     $this->_role=$role;
-    $this->_nbreCasting=[];
+    $role->ajouterCasting($this);
 }
 public function getPrenomActeur(){
     return $this->_acteur->getPrenom();
@@ -35,9 +34,7 @@ public function setFilm($film){
 public function setRole($role){
     $this->_role=$role;
 }
-public function nbreDeCasting($nbreCasting){
-    $this->_nbreCasting[] =$nbreCasting;
-}
+
 public function getListeInfoActeur(){
        echo "Nombre de casting".count($this->_nbreCasting)."</br>";
     //     echo "Il a joué dans : </br>";
