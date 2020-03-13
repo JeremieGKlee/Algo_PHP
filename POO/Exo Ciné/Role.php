@@ -2,7 +2,7 @@
 class Role{
     private $_nomDuRole;
     private $_castings;
-    private static $_allRole=
+    // private static $_allRoles=[];
 
 
     public function __construct($nomDuRole){
@@ -22,17 +22,18 @@ class Role{
     public function ajouterCasting($castings){
         $this->_castings[]= $castings;
     }
-    //  public function getListActeurRole(){
-    //     foreach($this->_castings as $castings){
-    //         echo $castings->getNomDuRole()."</br>";
-
-    //     }       
-    //  }
-     public static function getListActeurRole(){
-        foreach($this->_castings as $castings){
-            echo $castings->getNomDuRole()."</br>";
+     public function getListActeurRole(){
+        foreach($this->_castings as $casting){
+            echo $casting->getPrenomActeur()." ".$casting->getNomActeur()."</br>";
+            echo $casting->getNomActeur()." "."</br>
 
         }       
+     }
+    //  public static function getListActeurRole(){
+    //     foreach(self::_allRoles as $value){
+    //         echo $cvalue->getNomDuRole()."</br>";
+
+    //     }       
      }
 
 

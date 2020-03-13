@@ -93,4 +93,4 @@ $Casting16 = new Casting($a8,$f1,$ro2);
 // $g1->getInfoTousLesFilmsDunGenre();
 // $a1->getInfoActeur();
 // $f1->getInfoFilm();
-ROLE::getListActeurRole();
+
